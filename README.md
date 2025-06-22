@@ -56,27 +56,7 @@ Tooling	Vite, ESLint, dotenv, Postman
 Security	Input sanitization, file validation, auth middleware
 🗂️ Project Structure
 
-.
-├── client/               # Frontend (React + Vite)
-│   ├── components/       # Reusable UI & logic split by domain
-│   ├── pages/            # Route-specific views
-│   ├── context/          # Global auth context
-│   ├── hooks/            # Custom reusable hooks
-│   ├── services/         # Axios API logic
-│   └── utils/            # Constants & helpers
-│
-├── server/               # Backend (Express API)
-│   ├── controllers/      # Business logic
-│   ├── models/           # Mongoose schemas
-│   ├── routes/           # API endpoints
-│   ├── middleware/       # Auth, validation, error handling
-│   ├── utils/            # Custom error and response helpers
-│   └── config/           # DB config
-│
-├── uploads/              # Uploaded image storage
-├── seeder.js             # Data seeding script
-└── server.js             # API entry point
-
+![alt text](image.png)
 🚀 Getting Started
 
     You'll need Node.js, MongoDB, and npm installed.
