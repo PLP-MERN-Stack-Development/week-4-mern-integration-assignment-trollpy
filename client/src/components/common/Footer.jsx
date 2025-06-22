@@ -31,7 +31,7 @@ const Footer = () => {
           {/* Minimal copyright */}
           <div className="text-center">
             <p className="text-xs font-light text-slate-400 tracking-[0.15em]">
-              © {currentYear} sheriff thompho
+              © {currentYear}  thompho sheriff
             </p>
           </div>
          

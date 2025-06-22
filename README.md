@@ -1,70 +1,140 @@
-# Code & Chaos - Development Journal
+ Code & Chaos – Full-Stack Blog Platform
 
-> **MERN Stack Blog Application** | Full-stack development showcase with modern authentication, content management, and responsive design.
+    A feature-rich MERN stack blog application designed with production-level architecture, modern authentication, dynamic content handling, and a seamless user experience.
+    Built as part of a full-stack integration challenge to demonstrate practical expertise across frontend, backend, and API design.
 
-![MERN](https://img.shields.io/badge/MERN-Stack-61DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-404D59) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
+MERN MongoDB Express React Node.js
+💡 Project Overview
 
-## 🎯 Key Features
+Code & Chaos is a full-stack blogging platform built to support authenticated content creation, commenting, and rich user experiences. The application reflects a modular, scalable MERN architecture, covering:
 
-**Authentication & Authorization**
-- JWT-based secure login/registration system
-- Protected routes and user session management
-- Role-based access control (admin/user roles)
+    Robust authentication and role-based access
 
-**Content Management**
-- Full CRUD operations for blog posts
-- Rich text editor with markdown support
-- Featured article system and search functionality
-- User dashboard for content management
+    Complete blog post CRUD with markdown support
 
-**Modern UI/UX**
-- Responsive design with dark theme
-- Dynamic search and filtering
-- Clean, professional interface optimized for readability
+    Real-time comment management system
 
-## 🛠 Tech Stack
+    Secure image uploads and input validation
 
-**Frontend:** React.js • React Router • Axios • TAILWINDCSS3  
-**Backend:** Node.js • Express.js • JWT Authentication  
-**Database:** MongoDB • Mongoose ODM  
-**Deployment:** [Your deployment platform]
+    Responsive UI with dark/light mode
 
-## 🚀 Quick Start
+🧩 Key Features
+🔐 Authentication & Authorization
 
-```bash
-# Clone and install
-git clone https://github.com/trollpy/blog.git
+    JWT-based login & registration
+
+    Role-based access control (admin/user)
+
+    Secure password hashing and token storage
+
+📝 Content & Comments
+
+    Rich blog post editor with image and markdown support
+
+    Full CRUD for posts, categories, and comments
+
+    Nested comment system
+
+    Dynamic search and filtering
+
+🖥️ UI & UX
+
+    Mobile-friendly, responsive layout with TailwindCSS
+
+    Toggleable dark/light theme
+
+    User dashboard for content management
+
+    Clean, minimal interface optimized for readability
+
+🛠 Tech Stack
+Layer	Technologies
+Frontend	React, React Router, Tailwind CSS, Axios
+Backend	Node.js, Express.js, JWT, Bcrypt, Multer
+Database	MongoDB with Mongoose ODM
+Tooling	Vite, ESLint, dotenv, Postman
+Security	Input sanitization, file validation, auth middleware
+🗂️ Project Structure
+
+.
+├── client/               # Frontend (React + Vite)
+│   ├── components/       # Reusable UI & logic split by domain
+│   ├── pages/            # Route-specific views
+│   ├── context/          # Global auth context
+│   ├── hooks/            # Custom reusable hooks
+│   ├── services/         # Axios API logic
+│   └── utils/            # Constants & helpers
+│
+├── server/               # Backend (Express API)
+│   ├── controllers/      # Business logic
+│   ├── models/           # Mongoose schemas
+│   ├── routes/           # API endpoints
+│   ├── middleware/       # Auth, validation, error handling
+│   ├── utils/            # Custom error and response helpers
+│   └── config/           # DB config
+│
+├── uploads/              # Uploaded image storage
+├── seeder.js             # Data seeding script
+└── server.js             # API entry point
+
+🚀 Getting Started
+
+    You'll need Node.js, MongoDB, and npm installed.
+
+1. Clone the repository
+
+git clone https://github.com/PLP-MERN-Stack-Development/week-4-mern-integration-assignment-trollpy.git
 cd blog
-npm install && cd client && npm install
 
-# Set environment variables
-echo "MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret" > .env
+2. Install dependencies
 
-# Run development
-npm run dev        # Backend (port 5000)
-cd client && npm start  # Frontend (port 3000)
-```
+# Backend
+npm install
 
-## 🔧 Technical Highlights
+# Frontend
+cd client
+npm install
 
-- **RESTful API Design** with Express.js middleware and error handling
-- **MongoDB Schema Design** with Mongoose for data modeling
-- **JWT Authentication** with protected routes and token validation  
-- **React Hooks & Context API** for state management
-- **Responsive CSS** with modern layout techniques
-- **Input Validation** and sanitization for security
+3. Environment setup
 
-## 📊 Project Structure
-```
-blog/
-├── client/          # React frontend
-├── models/          # MongoDB schemas  
-├── routes/          # Express API routes
-├── middleware/      # Auth & validation
-└── controllers/     # Business logic
-```
+Create a .env file in the root directory:
 
----
-**Live Demo:** [Add your deployment URL]  
-**Contact:** [Your professional email]
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+
+4. Run the application
+
+# Start backend
+npm run dev
+
+# In another terminal: start frontend
+cd client
+npm run dev
+
+The app will be available at:
+
+    Frontend: http://localhost:5173
+
+    Backend: http://localhost:5000/api
+
+🧠 What This Project Demonstrates
+
+    ✅ Real-world REST API design with Express and route protection
+
+    ✅ Modular, maintainable frontend with React Context + custom hooks
+
+    ✅ File uploads and validation using Multer
+
+    ✅ Scalable MongoDB schema design
+
+    ✅ Tailwind CSS mastery for fast, responsive UI
+
+    ✅ Full understanding of the MERN stack from database to UI
+
+📌 Status
+
+This project was built as part of a learning + demonstration exercise and is fully functional locally, but not yet deployed.
+📫 Contact
+
+Developer: Thompho Sheriff
+GitHub: https://github.com/trollpy
