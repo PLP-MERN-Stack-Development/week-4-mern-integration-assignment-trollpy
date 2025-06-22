@@ -1,120 +1,199 @@
- Code & Chaos – Full-Stack Blog Platform
 
-    A feature-rich MERN stack blog application designed with production-level architecture, modern authentication, dynamic content handling, and a seamless user experience.
-    Built as part of a full-stack integration challenge to demonstrate practical expertise across frontend, backend, and API design.
+# 🧠 Code & Chaos – A MERN Stack Blog Platform
 
-MERN MongoDB Express React Node.js
-💡 Project Overview
+> A full-featured blog application built with the MERN stack, focused on clean architecture, role-based access, markdown publishing, and a beautiful responsive UI. Designed as a hands-on showcase of full-stack development expertise.
 
-Code & Chaos is a full-stack blogging platform built to support authenticated content creation, commenting, and rich user experiences. The application reflects a modular, scalable MERN architecture, covering:
+![MERN](https://img.shields.io/badge/MERN-Stack-61DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white) ![Express](https://img.shields.io/badge/Express.js-404D59) ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)
 
-    Robust authentication and role-based access
+---
 
-    Complete blog post CRUD with markdown support
+## 📖 Project Overview
 
-    Real-time comment management system
+**Code & Chaos** is a developer-focused blogging platform featuring secure authentication, rich text publishing with markdown, nested comments, and a responsive design. It was built as part of an integration challenge and showcases production-level architecture, performance optimizations, and scalable code structure.
 
-    Secure image uploads and input validation
+---
 
-    Responsive UI with dark/light mode
+## 🧩 Features Implemented
 
-🧩 Key Features
-🔐 Authentication & Authorization
+### 🔐 Authentication & Access
+- User registration and login with JWT
+- Role-based access control (Admin/User)
+- Protected routes and session management
 
-    JWT-based login & registration
+### 📝 Blogging & Comments
+- Full CRUD for blog posts
+- Markdown support for post body
+- Secure image uploads (Multer)
+- Nested comments with moderation features
+- Categories and filtering
 
-    Role-based access control (admin/user)
+### 🎨 UI/UX
+- Tailwind CSS 3 styling
+- Light/dark theme toggle
+- Mobile-responsive layout
+- Smooth transitions and focus on readability
 
-    Secure password hashing and token storage
+---
 
-📝 Content & Comments
+## ⚙️ Tech Stack
 
-    Rich blog post editor with image and markdown support
+```
+| Layer      | Technologies                          |
+|------------|---------------------------------------|
+| Frontend   | React, React Router, Tailwind CSS, Axios |
+| Backend    | Node.js, Express.js, JWT, Bcrypt, Multer |
+| Database   | MongoDB with Mongoose ODM             |
+| Tooling    | Vite, ESLint, dotenv, Postman         |
+```
 
-    Full CRUD for posts, categories, and comments
+---
 
-    Nested comment system
+## 🛠 Setup Instructions
 
-    Dynamic search and filtering
+### ✅ Prerequisites
+- Node.js & npm installed
+- MongoDB running locally or via cloud (e.g., MongoDB Atlas)
 
-🖥️ UI & UX
+### 📦 Installation
 
-    Mobile-friendly, responsive layout with TailwindCSS
-
-    Toggleable dark/light theme
-
-    User dashboard for content management
-
-    Clean, minimal interface optimized for readability
-
-🛠 Tech Stack
-Layer	Technologies
-Frontend	React, React Router, Tailwind CSS, Axios
-Backend	Node.js, Express.js, JWT, Bcrypt, Multer
-Database	MongoDB with Mongoose ODM
-Tooling	Vite, ESLint, dotenv, Postman
-Security	Input sanitization, file validation, auth middleware
-🗂️ Project Structure
-
-![alt text](image.png)
-🚀 Getting Started
-
-    You'll need Node.js, MongoDB, and npm installed.
-
-1. Clone the repository
-
-git clone https://github.com/PLP-MERN-Stack-Development/week-4-mern-integration-assignment-trollpy.git
+```bash
+# 1. Clone the repository
+git clone https://github.com/trollpy/blog.git
 cd blog
 
-2. Install dependencies
-
-# Backend
+# 2. Install backend dependencies
 npm install
 
-# Frontend
+# 3. Install frontend dependencies
 cd client
 npm install
+```
 
-3. Environment setup
+### 🔐 Setup Environment Variables
 
-Create a .env file in the root directory:
+In the root directory, create a `.env` file with:
 
-MONGO_URI=your_mongodb_connection_string
+```env
+MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
+```
 
-4. Run the application
+### 🚀 Running the App
 
-# Start backend
+```bash
+# Start the backend
 npm run dev
 
-# In another terminal: start frontend
+# Start the frontend
 cd client
 npm run dev
+```
 
-The app will be available at:
+Frontend: http://localhost:3000  
+Backend API: http://localhost:5000/api
 
-    Frontend: http://localhost:5173
+---
 
-    Backend: http://localhost:5000/api
+## 🧪 API Documentation
 
-🧠 What This Project Demonstrates
+### ✅ Auth API Endpoints
 
-    ✅ Real-world REST API design with Express and route protection
+```
+| Method | Endpoint        | Description              |
+|--------|------------------|--------------------------|
+| POST   | /auth/register   | Register a new user      |
+| POST   | /auth/login      | Authenticate user & token|
+| GET    | /auth/me         | Get logged-in user info  |
+```
 
-    ✅ Modular, maintainable frontend with React Context + custom hooks
+### 📝 Post API Endpoints
 
-    ✅ File uploads and validation using Multer
+```
+| Method | Endpoint       | Description                     |
+|--------|----------------|---------------------------------|
+| GET    | /posts          | Get all blog posts              |
+| POST   | /posts          | Create a new post (auth only)   |
+| GET    | /posts/:id      | Get a specific post by ID       |
+| PUT    | /posts/:id      | Update post (auth + owner only)|
+| DELETE | /posts/:id      | Delete post (auth + owner only)|
+```
 
-    ✅ Scalable MongoDB schema design
+### 💬 Comment API Endpoints
 
-    ✅ Tailwind CSS mastery for fast, responsive UI
+```
+| Method | Endpoint                | Description                 |
+|--------|-------------------------|-----------------------------|
+| POST   | /posts/:id/comments     | Add a comment to a post     |
+| GET    | /posts/:id/comments     | Retrieve comments for a post|
+| DELETE | /comments/:id           | Delete a comment (auth only)|
+```
 
-    ✅ Full understanding of the MERN stack from database to UI
+### 📂 Category API Endpoints
 
-📌 Status
+```
+| Method | Endpoint       | Description                       |
+|--------|----------------|-----------------------------------|
+| GET    | /categories    | Get all available categories       |
+| POST   | /categories    | Create a new category (admin only)|
+```
 
-This project was built as part of a learning + demonstration exercise and is fully functional locally, but not yet deployed.
-📫 Contact
+---
 
-Developer: Thompho Sheriff
-GitHub: https://github.com/trollpy
+## 📁 Project Structure
+
+```
+.
+├── client/               # React + Vite frontend
+│   ├── components/       # Reusable UI logic
+│   ├── pages/            # Route views (Login, Register, etc.)
+│   ├── hooks/            # Custom React hooks
+│   ├── context/          # Auth context
+│   ├── services/         # Axios API logic
+│   └── utils/            # Constants & helpers
+│
+├── server/               # Node.js + Express backend
+│   ├── controllers/      # Route logic
+│   ├── models/           # Mongoose schemas
+│   ├── routes/           # Express routes
+│   ├── middleware/       # Auth, validation, error handler
+│   ├── uploads/          # Uploaded image assets
+│   └── utils/            # Custom helpers
+│
+└── seeder.js             # Optional data seeder
+```
+
+---
+
+## 📸 Screenshots
+
+
+- ![](./public/screenshot-home.png)
+- ![](./public/screenshot-post.png)
+- ![](./public/screenshot-editor.png)
+- ![](./public/screenshot-dark.png)
+
+
+---
+
+## 🧠 What This Project Demonstrates
+
+- ✅ REST API with Express + secure JWT authentication
+- ✅ Scalable MongoDB schema design with Mongoose
+- ✅ Role-based access control and protected routes
+- ✅ React Hooks and Context API usage
+- ✅ Tailwind CSS 3 proficiency
+- ✅ Rich file structure and production-style modularity
+
+---
+
+## 🚫 Live Demo
+
+⚠️ **Currently not deployed online.**  
+To run locally, follow the setup instructions above.
+
+---
+
+## 📬 Contact
+
+**Developer**: Thompho Sheriff  
+**GitHub**: [@trollpy](https://github.com/trollpy)  
